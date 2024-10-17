@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INOX Movies</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../src/inox.css">
+        <script src="../scripts/inox.js"></script>
+    </head>
+    <body class="container-fluid">
+        <header>
+                <div>
+                    <nav class="nav nav-pills nav-fill">
+                        <a class="nav-item" id="brandimg"><img src="../public/images/inoxlogo.jpg" width="120" height="80"></a>
+                        <a class="nav-link"><span class="bi bi-house"></span> Home</a>
+                        <a class="nav-link"><span class="bi bi-film"></span> Cinemas</a>
+                        <a class="nav-link"><span class="bi bi-percent"></span> Offers</a>
+                        <a class="nav-link"><span class="bi bi-graph-up-arrow"></span> Investor Section</a>
+                        <a class="nav-link"><span class="bi bi-star-fill"></span> Passport</a>
+                        <a class="nav-link dropdown dropdown-toggle" data-bs-toggle="dropdown"><span class="bi bi-list"></span>More</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Gift Cards</a></li>
+                            <li><a class="dropdown-item" href="#">Advertise</a></li>
+                            <li><a class="dropdown-item" href="#">Merchandise</a></li>
+                            <li><a class="dropdown-item" href="#">Bulk Gift Cards</a></li>
+                            <li><a class="dropdown-item" href="#">Curated Shows</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Experiences</a></li>
+                           
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <nav class="nav nav-pills">
+                        <div class="nav-item" id="searchbar"><input type="text" class="form-control" placeholder="search"></div>
+                        <button class="btn nav-item" id="location">
+                            <select class="form-select">
+                                <option>Hyderabad</option>
+                                <option>Chennai</option>
+                                <option>Bangalore</option>
+                                <option>Mumbai</option>
+                            </select>
+                        </button>
+                        <button class="btn" id="login"><span class="bi bi-person-circle"></span>Login</button>
+                    </nav>
+                </div>
+        </header>
+        <section>
+            <div class="row" id="qbook">
+                <span class="col">Quick Book</span>
+                <span class="col">
+                    <select class="form-select" id="movieselect">
+                        <option>Select Movie</option>
+                        <option>Devara</option>
+                        <option>Vettaiyan</option>
+                        <option>Viswam</option>
+                        <option>Jigra</option>
+                        <option>Kung Fu Panda 4</option>
+                        <option>The Garfield Movie</option>
+
+                    </select>
+                </span>
+                <span class="col">
+                    <select class="form-select" id="tickno">
+                        <option>Select Tickets</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </span>
+                <span class="col">
+                    <select class="form-select" id="dateselect">
+                        <option>Select Date</option>
+                        <option>17 oct, 2024</option>
+                        <option>18 oct, 2024</option>
+                        <option>19 oct, 2024</option>
+                        <option>20 oct, 2024</option>
+                        <option>21 oct, 2024</option>
+                    </select>
+                </span>
+                <span class="col">
+                    <select class="form-select" id="locselect">
+                        <option>Select Cinema</option>
+                        <option>PVR Musarambagh, Hyderabad</option>
+                        <option>PVR Irrum Manzil, Hyderabad</option>
+                        <option>PVR Sattava Necklace Mall</option>
+                        <option>INOX GVK One, Banjara Hills</option>
+                    </select>
+                </span>
+                <span class="col">
+                    <select class="form-select" id="timeselect">
+                        <option>Select Timing</option>
+                        <option>10:00 am</option>
+                        <option>11:10 am</option>
+                        <option>12:30 pm</option>
+                        <option>1:20 pm</option>
+                        <option>6:00 pm</option>
+
+                    </select>
+                </span>
+                <span class="col"><button class="btn" id="btickets" data-bs-toggle="collapse" data-bs-target="#bookdetails" onclick="bookClick()">Book Tickets</button></span>
+                <div class="accordion collapse" id="bookdetails">
+                    <div class="accordion-item">
+                        <div class="accordion-header text-center fw-bold fs-5 mt-3">
+                            Booking Summary
+                        </div>
+                        <div class="accordion-body">
+                            <div id="mvinfo">
+                                <div class="row">
+                                    <div class="col">
+                                        <img id="mvimg" width="150" height="180">
+                                    </div>
+                                    <div class="col">
+                                        <ol class="list-unstyled">
+                                            <li id="lblname" class="fw-semibold"></li>
+                                            <li id="lbltickets"></li>
+                                            <li id="lbldate"></li>
+                                            <li id="lbltime"></li>
+                                            <li id="lblcinema"></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div>
+                                    <p class="fw-bold fs-5">Payment Details</p>
+                                    <dl id="mvdetails">
+                                        
+                                        <dt>Sub Total:</dt>
+                                        <dd id="stotal"></dd>
+                                        <dt>GST:</dt>
+                                        <dd >&#8377; 3.75/-</dd>
+                                        <dt>Service Tax:</dt>
+                                        <dd>&#8377; 21/-</dd>
+                                        <dt>Grand Total:</dt>
+                                        <dd id="gtotal"></dd>
+
+                                    </dl>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn" id="paybtn" onclick="proceedClick()" data-bs-toggle="collapse" data-bs-target="#bookdetails">Confirm Tickets</button>
+                                    <button class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#bookdetails">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <div id="cards">
+                    <div id="moviecard">
+                        <img src="../public/images/devara.jpg" width="250" height="300">
+                        <p id="mname">Devara</p>
+                        <p id="mlang">Telugu (U/A)</p>
+                        <button class="btn " id="mvbtn">Book Tickets</button>
+                        <button class="btn btn-secondary" title="Details"><span class="bi bi-info-circle"></span></button>
+                    </div>
+                    <div id="moviecard">
+                        <img src="../public/images/vettayan.jpg" width="250" height="300">
+                        <p id="mname">Vettaiyan</p>
+                        <p id="mlang">Telugu (U/A)</p>
+                        <button class="btn " id="mvbtn">Book Tickets</button>
+                        <button class="btn btn-secondary" title="Details"><span class="bi bi-info-circle"></span></button>
+                    </div>
+                    <div id="moviecard">
+                        <img src="../public/images/jigra.jpg" width="250" height="300">
+                        <p id="mname">Jigra</p>
+                        <p id="mlang">Hindi (U/A)</p>
+                        <button class="btn " id="mvbtn">Book Tickets</button>
+                        <button class="btn btn-secondary" title="Details"><span class="bi bi-info-circle"></span></button>
+                    </div>
+                    <div id="moviecard">
+                        <img src="../public/images/smile2.jpg" width="250" height="300">
+                        <p id="mname">Smile 2</p>
+                        <p id="mlang">English</p>
+                        <button class="btn " id="mvbtn">Book Tickets</button>
+                        <button class="btn btn-secondary" title="Details"><span class="bi bi-info-circle"></span></button>
+                    </div>
+                    <div id="moviecard">
+                        <img src="../public/images/viswam.jpg" width="250" height="300">
+                        <p id="mname">Viswam</p>
+                        <p id="mlang">Telugu (U/A)</p>
+                        <button class="btn " id="mvbtn">Book Tickets</button>
+                        <button class="btn btn-secondary" title="Details"><span class="bi bi-info-circle"></span></button>
+                    </div>
+                    <div id="moviecard">
+                        <img src="../public/images/kungfu.jpg" width="250" height="300">
+                        <p id="mname">Kungu Fu Panda 4</p>
+                        <p id="mlang">English</p>
+                        <button class="btn " id="mvbtn">Book Tickets</button>
+                        <button class="btn btn-secondary" title="Details"><span class="bi bi-info-circle"></span></button>
+                    </div>
+                    <div id="moviecard">
+                        <img src="../public/images/garfield.jpg" width="250" height="300">
+                        <p id="mname">The Garfield Movie</p>
+                        <p id="mlang">English</p>
+                        <button class="btn " id="mvbtn">Book Tickets</button>
+                        <button class="btn btn-secondary" title="Details"><span class="bi bi-info-circle"></span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
