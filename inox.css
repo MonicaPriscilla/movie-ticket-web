@@ -1,0 +1,124 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+#brandimg{
+    margin-top:0px;
+}
+.nav-link{
+    margin-top:15px;
+    height:40px;
+    color:black;
+    
+}
+.nav-link:hover{
+    background-color: rgb(15, 121, 179);
+    color:white;
+    border-radius: 20px;
+}
+#searchbar{
+    margin-top:15px;
+}
+#location{
+    margin-top:6px;
+}
+#login{
+    border:1px solid black;
+    height:40px;
+    margin-top: 12px;;
+}
+#login:hover{
+    background-color: black;
+    color:white;
+}
+#qbook{
+   margin-left:50px;
+   margin-right:50px;
+   padding:10px;
+   background-color: rgb(221, 239, 255);
+    
+}
+#qbook input{
+    width:220px;
+}
+option{
+    color:black;
+}
+option:first-child{
+    color:grey;
+}
+
+
+#btickets{
+    background-color: rgb(15, 121, 179);
+    color:white;
+}
+.row>span{
+    font-weight: bold;
+    margin-left:30px;
+    margin-top:15px;
+}
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+#moviecard{
+    width:300px;
+    padding:10px;
+    margin:10px;
+    
+}
+#mvbtn{
+    background-color: rgb(15, 121, 179);
+    color:white;
+    width:200px;
+}
+#mname{
+    font-size: 18px;
+    font-weight: 500;
+}
+#mlang{
+    font-size: 14px;
+    color:gray;
+    font-weight: 400;
+}
+.accordion-body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#mvinfo, #mvpay{
+    width:400px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding:20px;
+}
+#mvpay ol{
+    list-style: none;
+    text-align: start;
+    
+}
+
+#paybtn{
+    background-color: rgb(15, 121, 179);
+    color:white;
+    width:200px;
+    margin-right: 5px;
+}
+#mvdetails dt{
+    font-weight: 500;
+
+}
+#mvdetails dd{
+    color:rgb(15, 121, 179);
+    font-weight: 500;
+}
+#mpbtn{
+    background-color: rgb(15, 121, 179);
+    color:white;
+    width:200px;
+}
+
