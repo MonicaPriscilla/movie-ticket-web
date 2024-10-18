@@ -10,25 +10,25 @@ function bookClick(){
     
     switch(mvname){
         case "Devara":
-            document.getElementById("mvimg").src="../public/images/devara.jpg";
+            document.getElementById("mvimg").src="images/devara.jpg";
             break;
         case "Vettaiyan":
-            document.getElementById("mvimg").src="../public/images/vettayan.jpg";
+            document.getElementById("mvimg").src="images/vettayan.jpg";
             break;
             case "Viswam":
-            document.getElementById("mvimg").src="../public/images/viswam.jpg";
+            document.getElementById("mvimg").src="images/viswam.jpg";
             break;
         case "Jigra":
-            document.getElementById("mvimg").src="../public/images/jigra.jpg";
+            document.getElementById("mvimg").src="images/jigra.jpg";
             break;
             case "Kung Fu Panda 4":
-            document.getElementById("mvimg").src="../public/images/kungfu.jpg";
+            document.getElementById("mvimg").src="images/kungfu.jpg";
             break;
         case "The Garfield Movie":
-            document.getElementById("mvimg").src="../public/images/garfield.jpg";
+            document.getElementById("mvimg").src="images/garfield.jpg";
             break;
             default:
-                document.getElementById("mvimg").src="../public/images/inoxlogo.jpg"
+                document.getElementById("mvimg").src="images/inoxlogo.jpg"
     }
 
     stotal = parseInt(tickno * 295);
